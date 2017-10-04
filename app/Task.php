@@ -4,8 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class Task extends Model
 {
+
+
 
    public function isComplete()
    {
@@ -50,20 +54,34 @@ class Task extends Model
    {
 
       	return $query->WHERE('id', '<', '3')->get();
-   } 
+   }
+
+
 
     public function scopeFindBody($query)
    {
    		
    		return $query->pluck('body')->first();   
+   }
+
+
+
+   public function scopeFindLastBody($query)
+   {
+   		
+   		return $query->pluck('body')->last();   
    } 
+
 
     public function scopeAllBody($query)
    {
+   		return $query = Tasks::all(); 
 
-   		return $query->all(['body']);   
+   		//  return view('tasks.index', compact('tasks'));
+
+
+    //return  $tasket->body;
    } 
-
 
    
 }

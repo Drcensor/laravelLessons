@@ -49,12 +49,15 @@
                         {{$task = App\Task::FindBody()}}
                     </li>
 
+                    <li>
+                        {{$task = App\Task::FindLastBody()}}
+                    </li>
+
+                 
                   
-
-
-
-                   
             </ul>
+
+
 
              <ul>
                 @foreach($tasks as $task)
@@ -65,6 +68,20 @@
                 @endforeach
 
             </ul>
+
+        
+            <ul>
+                @foreach($tasks as $task)
+
+                    <li>
+                        {{$task->body}}
+                    </li>
+                @endforeach
+
+            </ul> 
+          
+
+             
 
              
 
