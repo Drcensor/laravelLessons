@@ -5,7 +5,7 @@
 </head>
 <body>
 
- <ul>
+			<ul>
                 @foreach($tasks as $task)
 
                     <li>
@@ -16,6 +16,57 @@
                 @endforeach
 
             </ul>
+
+            <ul>
+                @foreach($tasks as $task)
+
+                    <li>
+                        {{$task = App\Task::WhereLessId()}}
+                    </li>
+                @endforeach
+
+            </ul>
+
+            <ul>
+              
+                    <li>
+                        {{$task = App\Task::WhereLessId()}}
+                    </li>
+
+                    <li>
+                        {{$task = App\Task::WhereMoreId()}}
+                    </li>
+              
+              		<li>
+                        {{$task = App\Task::NotCompleted()}}
+                    </li>
+
+                    <li>
+                        {{$task = App\Task::InComplete()->get()}}
+                    </li>
+
+                    <li>
+                        {{$task = App\Task::FindBody()}}
+                    </li>
+
+                  
+
+
+
+                   
+            </ul>
+
+             <ul>
+                @foreach($tasks as $task)
+
+                    <li>
+                        {{$task = App\Task::FindBody()}}
+                    </li>
+                @endforeach
+
+            </ul>
+
+             
 
           
 
