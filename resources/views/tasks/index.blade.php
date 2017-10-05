@@ -79,13 +79,18 @@
                 @endforeach
 
             </ul> 
-          
 
-             
+<?php   use App\Task; $query = App\Task::AllBody(); ?>
 
-             
-
-          
+			<ul>
+				 @foreach ($query as $task)
+				 
+		   			 <li>{{$task->body}} </li>
+		   
+				@endforeach
+		          
+			</ul>
+		             
 
 </body>
 </html>

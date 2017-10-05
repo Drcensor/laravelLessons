@@ -73,14 +73,15 @@ class Task extends Model
    } 
 
 
-    public function scopeAllBody($query)
+    public function scopeAllBody($query )
    {
    		return $query = Tasks::all(); 
 
-   		//  return view('tasks.index', compact('tasks'));
+   		 // return view('tasks.index', compact('tasks'));
+
+   		 //  return  compact('tasks->body');
 
 
-    //return  $tasket->body;
    } 
 
    
